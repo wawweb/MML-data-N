@@ -52,38 +52,6 @@ header {
         left: 0;
         z-index: 10;
 
-        .topBar {
-            width: 669px;
-            height: 567px;
-            position: absolute;
-            top: -407px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: skakeBub 15s linear 0s infinite;
-            @keyframes skakeBub {
-                0% {
-                    width: 669px;
-                    height: 567px;
-                }
-                5% {
-                    width: 660px;
-                    height: 600px;
-                }
-                10% {
-                    width: 600px;
-                    height: 560px;
-                }
-                50% {
-                    width: 760px;
-                    height: 610px;
-                }
-                100% {
-                    width: 669px;
-                    height: 567px;
-                }
-            }
-        }
-
         .logoBox {
             width: 100%;
             height: auto;

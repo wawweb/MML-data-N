@@ -120,6 +120,11 @@ main {
   background-size: contain;
 }
 
+.info_BG .imgBox {
+  background: url("../images/info_prize.png") no-repeat center;
+  background-size: contain;
+}
+
 .info_BG .imgBox .title {
   background: url("../images/title.gif") no-repeat center;
   background-size: contain;
@@ -2406,6 +2411,7 @@ html body .info_BG {
   left: 0;
   padding: 1205px 0;
   overflow: hidden;
+  z-index: 2;
 }
 html body .info_BG .topBg {
   width: 100%;
@@ -2684,40 +2690,37 @@ html body .info_BG .topBg .ladder {
   }
 }
 html body .info_BG .imgBox {
-  width: 887px;
-  height: 174px;
+  width: 945px;
+  height: 232px;
   font-size: 0;
   position: absolute;
-  top: 190px;
+  top: 163px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 5;
-  background: rgba(9, 28, 64, 0.7803921569);
-  border: 5px solid #ffffff;
-  border-radius: 60px;
 }
 html body .info_BG .imgBox .title {
   width: 609px;
   height: 169px;
   position: absolute;
-  top: -180px;
+  top: -143px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 html body .info_BG .imgBox .battery {
-  width: 151px;
-  height: 269px;
+  width: 74px;
+  height: 192px;
   position: absolute;
-  left: -60px;
+  left: -13px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 html body .info_BG .imgBox ul {
-  width: 873px;
-  height: 124px;
+  width: 887px;
+  height: 104px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2730,36 +2733,22 @@ html body .info_BG .imgBox ul {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-right: 65px;
+  overflow: hidden;
 }
 html body .info_BG .imgBox ul li {
   width: 48px;
   height: 65px;
-  margin: 0 15px;
+  margin-left: 29.5px;
   position: relative;
+  -webkit-transform-origin: top;
+          transform-origin: top;
   -webkit-filter: drop-shadow(0px 0px 3px #69fffd) contrast(200%);
           filter: drop-shadow(0px 0px 3px #69fffd) contrast(200%);
   z-index: 1;
-}
-html body .info_BG .imgBox ul li::after {
-  content: "";
-  width: 69px;
-  height: 104px;
-  background: rgba(0, 0, 0, 0.2196078431);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: -2;
-}
-html body .info_BG .imgBox ul li:first-child {
-  margin-right: 0;
 }
 html body .info_BG .imgBox ul li.num_0 {
   background-position-y: 0%;
@@ -2790,21 +2779,119 @@ html body .info_BG .imgBox ul li.num_8 {
 }
 html body .info_BG .imgBox ul li.num_9 {
   background-position-y: 90%;
+  margin-right: 0.5px;
 }
 html body .info_BG .imgBox ul li.anime_1 {
-  animation: numMove_1 3s ease-in-out 0s alternate-reverse infinite;
+  animation: numMove_1 2s ease-in-out 0s alternate-reverse infinite;
 }
 @keyframes numMove_1 {
   0% {
-    background-position-y: 0;
+    background-position-y: 0%;
   }
-  20% {
-    background-position-y: 0;
+  40% {
+    background-position-y: 0%;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  60% {
+    background-position-y: 10%;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  70% {
+    background-position-y: 10%;
   }
   80% {
-    background-position-y: 90%;
+    background-position-y: 10%;
   }
   100% {
-    background-position-y: 90%;
+    background-position-y: 10%;
   }
+}
+html body .info_BG .imgBox ul li .test {
+  width: 60px;
+  height: 104px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@-webkit-keyframes turn2 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate3d(1, 0, 0, 0deg);
+            transform: translate(-50%, -50%) rotate3d(1, 0, 0, 0deg);
+  }
+  20% {
+    -webkit-transform: translate(-50%, -50%) rotate3d(1, 0, 0, 0deg);
+            transform: translate(-50%, -50%) rotate3d(1, 0, 0, 0deg);
+  }
+  80% {
+    -webkit-transform: translate(-50%, -50%) rotate3d(1, 0, 0, 360deg);
+            transform: translate(-50%, -50%) rotate3d(1, 0, 0, 360deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate3d(1, 0, 0, 360deg);
+            transform: translate(-50%, -50%) rotate3d(1, 0, 0, 360deg);
+  }
+}
+@keyframes turn2 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate3d(1, 0, 0, 0deg);
+            transform: translate(-50%, -50%) rotate3d(1, 0, 0, 0deg);
+  }
+  20% {
+    -webkit-transform: translate(-50%, -50%) rotate3d(1, 0, 0, 0deg);
+            transform: translate(-50%, -50%) rotate3d(1, 0, 0, 0deg);
+  }
+  80% {
+    -webkit-transform: translate(-50%, -50%) rotate3d(1, 0, 0, 360deg);
+            transform: translate(-50%, -50%) rotate3d(1, 0, 0, 360deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate3d(1, 0, 0, 360deg);
+            transform: translate(-50%, -50%) rotate3d(1, 0, 0, 360deg);
+  }
+}
+html body .info_BG .imgBox ul li .test .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: inherit;
+          backface-visibility: inherit;
+  font-size: 60px;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 0px -10px #ffffff) contrast(200%);
+          filter: drop-shadow(0px 0px -10px #ffffff) contrast(200%);
+}
+html body .info_BG .imgBox ul li .test .img.img1 {
+  background: rgba(0, 0, 0, 0.212);
+  -webkit-transform: translateZ(52px);
+          transform: translateZ(52px);
+}
+html body .info_BG .imgBox ul li .test .img.img2 {
+  background: rgba(0, 0, 0, 0.199);
+  -webkit-transform: rotateY(180deg) translateZ(52px) scale(-1);
+          transform: rotateY(180deg) translateZ(52px) scale(-1);
+}
+html body .info_BG .imgBox ul li .test .img.img3 {
+  background: rgba(167, 167, 167, 0.637);
+  -webkit-transform: rotateX(90deg) translateZ(52px);
+          transform: rotateX(90deg) translateZ(52px);
+}
+html body .info_BG .imgBox ul li .test .img.img4 {
+  background: rgba(167, 167, 167, 0.637);
+  -webkit-transform: rotateX(-90deg) translateZ(52px);
+          transform: rotateX(-90deg) translateZ(52px);
 }
